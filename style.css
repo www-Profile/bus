@@ -397,7 +397,6 @@ html {
         justify-content: center;
     }
 
-    .section-title { margin-bottom: 24px; }
     .section-title h2 { font-size: 1.6rem; }
 
     .cards-grid {
@@ -477,7 +476,6 @@ html {
         font-size: .88rem;
     }
 
-    .section-title { margin-bottom: 20px; }
     .section-title h2 { font-size: 1.4rem; }
 
     .services { margin-bottom: 48px; }
