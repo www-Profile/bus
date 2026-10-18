@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 24px 40px 24px;;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f172a;
+    position: relative;
+    display: inline-block;
+    font-family:'Times New Roman', Times, serif
+}
+
+/* Hero секция с автобусом */
+/* ===== КРУТОЙ HERO ===== */
+.hero {
+    margin-bottom: 64px;
+    position: relative;
+}
+
+.bus-showcase {
+    background: #fff;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    transition: transform .3s ease;
+}
+.bus-showcase:hover { transform: translateY(-4px); }
+
+.bus-image-container {
+    position: relative;
+    overflow: hidden;
+    min-height: 520px;
+}
+
+.bus-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+    display: block;
+}
+.bus-showcase:hover .bus-image { transform: scale(1.05); }
+
+/* Статистика поверх фото */
+.hero-stats {
+    position: absolute;
+    left: 24px; right: 24px; bottom: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: rgba(255,255,255,.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 18px;
+    padding: 14px;
+}
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.stat-num {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.1;
+}
+.stat-label {
+    font-size: .72rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    opacity: .85;
+    margin-top: 2px;
+}
+
+.bus-details {
+    padding: 48px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bus-details h1 {
+    font-size: clamp(1.9rem, 3vw, 2.6rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.12;
+    color: #0f172a;
+    letter-spacing: -.02em;
+}
+
+.hero-sub {
+    color: #64748b;
+    margin-bottom: 26px;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+.highlight { color: #1e3a8a; }
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #334155;
+    font-size: .95rem;
+}
+.feature i {
+    width: 36px; height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: #1e3a8a;
+    font-size: .95rem;
+    flex-shrink: 0;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: #1e3a8a;
+    color: #fff;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .95rem;
+    transition: all .2s ease;
+}
+
+/* Карточки услуг */
+.services {
+    margin-bottom: 64px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 28px;
+}
+
+.service-card {
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    min-height: 480px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 40px -15px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 32px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    color: white;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+}
+
+.service-card p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 24px;
+    line-height: 1.5;
+    font-size: 0.8rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.price {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.2px;
+}
+
+.order-btn {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+
+.order-btn:hover {
+    background: #2563eb;
+    transform: scale(0.98);
+}
+
+/* Контактная информация */
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 0;
+    background: white;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card {
+    padding: 48px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+    flex: 1;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #e2e8f0;
+    font-size: 1rem;
+}
+
+.contact-item i {
+    width: 24px;
+    color: rgb(89, 112, 134);
+    font-size: 1.2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 24px;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(89, 112, 134);
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: all 0.2s ease;
+    opacity: 0.8;
+}
+
+.social-link:hover {
+    opacity: 1;
+    color: #3b82f6;
+}
+
+.map-container {
+    background: #f1f5f9;
+    min-height: 400px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Чтобы заголовок «КОНТАКТЫ» не перекрывался, отступ при скролле */
+#contact {
+    scroll-margin-top: 40px;
+}
+
+/* ===== ФУТЕР ===== */
+.footer {
+    background: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    margin-top: 0;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    letter-spacing: .01em;
+}
+
+@media (max-width: 560px) {
+    .footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ===== АДАПТИВ ===== */
+
+/* Планшеты и ниже */
+@media (max-width: 968px) {
+    .container { padding: 30px 16px; }
+
+    .hero-badge { font-size: .78rem; padding: 7px 14px; }
+
+    .bus-showcase {
+        grid-template-columns: 1fr;
+    }
+    .bus-image-container {
+        min-height: 340px;
+    }
+    .bus-details {
+        padding: 24px;
+    }
+    .bus-details h1 {
+        font-size: 1.9rem;
+    }
+    .hero-sub {
+        font-size: .95rem;
+    }
+    .hero-stats {
+        left: 16px; right: 16px; bottom: 16px;
+        padding: 12px;
+        gap: 8px;
+    }
+    .stat-num { font-size: 1.2rem; }
+    .stat-label { font-size: .65rem; }
+
+    .features { gap: 12px; }
+    .feature { font-size: .9rem; }
+    .feature i { width: 32px; height: 32px; font-size: .85rem; }
+
+    .hero-actions { gap: 10px; }
+    .btn-primary {
+        padding: 12px 20px;
+        font-size: .9rem;
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+
+    .section-title { margin-bottom: 24px; }
+    .section-title h2 { font-size: 1.6rem; }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .service-card { min-height: 420px; }
+    .card-content { padding: 24px 20px; }
+    .service-card h3 { font-size: 1.3rem; }
+    .service-card p { font-size: .8rem; }
+    .price { font-size: 1.2rem; }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    .contact-card {
+        padding: 32px 24px;
+    }
+    .contact-details h1 {
+        font-size: 1.6rem;
+    }
+    .contact-item {
+        font-size: .92rem;
+        gap: 12px;
+    }
+    .contact-item i { font-size: 1.05rem; }
+
+    .social-links {
+        justify-content: center;
+        gap: 28px;
+    }
+
+    .map-container { min-height: 280px; }
+}
+
+/* Телефоны */
+@media (max-width: 560px) {
+    .container { padding: 30px 14px; }
+
+    .hero { margin-bottom: 48px; }
+
+    .hero-badge {
+        width: 100%;
+        justify-content: center;
+        font-size: .72rem;
+        padding: 6px 12px;
+        text-align: center;
+    }
+
+    .bus-showcase { border-radius: 24px; }
+    .bus-image-container { min-height: 260px; }
+
+    .hero-stats {
+        left: 12px; right: 12px; bottom: 12px;
+        border-radius: 14px;
+        padding: 10px;
+    }
+    .stat-num { font-size: 0.8rem; }
+    .stat-label { font-size: 0.6rem; letter-spacing: .04em; }
+    .hero-stats { padding: 6px;}
+
+    .bus-details {
+        padding: 20px;
+    }
+    .hero-kicker { font-size: .72rem; margin-bottom: 10px; }
+    .bus-details h1 { font-size: 1.55rem; margin-bottom: 12px; }
+    .hero-sub { font-size: .88rem; margin-bottom: 20px; }
+
+    .features { gap: 10px; margin-bottom: 22px; }
+    .feature { font-size: .85rem; gap: 10px; }
+    .feature i { width: 28px; height: 28px; font-size: .8rem; border-radius: 8px; }
+
+    .hero-actions { flex-direction: column; }
+    .btn-primary {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: .88rem;
+    }
+
+    .section-title { margin-bottom: 20px; }
+    .section-title h2 { font-size: 1.4rem; }
+
+    .services { margin-bottom: 48px; }
+    .cards-grid { gap: 16px; }
+    .service-card {
+        min-height: 380px;
+        border-radius: 20px;
+    }
+    .card-content { padding: 20px 18px; }
+    .service-card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+    .service-card p { font-size: .78rem; margin-bottom: 16px; }
+    .price { font-size: 1.1rem; }
+
+    .contact-card { padding: 28px 20px; }
+    .contact-details { gap: 18px; margin-bottom: 28px; }
+    .contact-details h1 { font-size: 1.35rem; }
+    .contact-item { font-size: .85rem; gap: 10px; }
+    .contact-item i { width: 20px; font-size: .95rem; }
+
+    .social-links { gap: 24px; padding-top: 16px; }
+    .social-link { font-size: 1.4rem; }
+
+    .map-container { min-height: 240px; }
+}
+
+/* Совсем маленькие экраны */
+@media (max-width: 380px) {
+    .bus-details h1 { font-size: 1.35rem; }
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        left: 10px; right: 10px; bottom: 10px;
+    }
+    .stat {
+        flex-direction: row;
+        justify-content: center;
+        gap: 6px;
+    }
+    .stat-num { font-size: 1rem; }
+    .stat-label { font-size: .6rem; }
+}
